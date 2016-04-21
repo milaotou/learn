@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../common/base.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>静静型</title>
+	<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no" />
+	<style>
+		.tips{ position:absolute;width:97px; height:199px; overflow:hidden; right:30px; top:68px;/* -webkit-animation:tips 10s infinite;*/}
+		@-webkit-keyframes tips{
+			0%{ width:0px; height:13px;}
+			30%{width:97px; height:13px;}
+			100%{ height:199px;}
+		}
+		.popUpBox{ position:absolute;width:100%; left:0; bottom:0; z-index:100;}
+		.popUpBox>div{ display:none; position:absolute; bottom:0; left:0; width:100%;background-color:rgba(0,0,0,0.4);}
+		.share{ height:120px; background:rgba(0,0,0,0.4) url(../img/sharebg4.png) center no-repeat;}
+		.friend{ height:120px;}
+		.shareBtn{ display:block; position:absolute;width:256px;height:53px;bottom:10px; left:188px; opacity:0;}
+		
+		.makeBtn{position:absolute; display:block;height:74px;width:100%; background:url(../img/stageBtn.png) center no-repeat; bottom:0px; left:0;}
+	
+	</style>      	
+</head>
+<body>
+<div class="topDiv" style="width:640px; height:100%; overflow: hidden">
+    <!--整合时音乐路径需替换-->
+    <div style="position:absolute; left:-9999px; overflow:hidden; width:0; height:0;">
+       <audio id="music0" src="music4_2.mp3" loop preload="preload">
+       Your browser does not support the audio element.
+       </audio>
+    </div>
+    <div class="jjx main bg">
+        <img class="jjx_1" src="images/jjx_01.png"/>
+        <img class="jjx_2" src="images/jjx_02.png"/>
+        <img class="jjx_3" src="images/jjx_03.png"/>
+        <img class="jjx_4" src="images/jjx_04.png"/>
+        <img class="jjx_5" src="images/jjx_05.png"/>
+        <img class="jjx_6" src="images/jjx_06.png"/>
+        <img class="jjx_7" src="images/jjx_07.png"/>
+        <img class="jjx_8" src="images/jjx_08_1.png"/>
+        <img class="jjx_81" src="images/jjx_08_2.png"/>
+        <img class="jjx_82" src="images/jjx_08_3.png"/>
+        <img class="jjx_83" src="images/jjx_08_3.png"/>
+        <img class="jjx_9"  src="images/jjx_09.png"/>
+        <img class="jjx_10" src="images/jjx_10.png"/>
+        <img class="jjx_101" src="images/jjx_101.png"/>
+        <div class="wallet">
+            <img src="images/jjx_101.png">
+            <img src="images/jjx_101.png">
+            <img src="images/jjx_101.png">
+            <img src="images/jjx_101.png">
+        </div>
+        <img class="jjx_11" src="images/jjx_11.png"/>
+        <img class="jjx_13" src="images/jjx_13.png"/>
+        <img class="jjx_14" src="images/jjx_14.png"/>
+        <img class="jjx_151" src="images/jjx_15_2.png"/>
+        <img class="jjx_152" src="images/jjx_15_3.png"/>
+        <img class="jjx_15" src="images/jjx_15_1.png"/>
+        <img class="jjx_16" src="images/jjx_16.png"/>
+        <img class="jjx_17" src="images/jjx_17.png"/>
+        <img class="jjx_18" src="images/jjx_18.png"/>
+        <img class="jjx_21" src="images/jjx_19.png"/>
+        <img class="jjx_22" src="images/jjx_20.png"/>		
+        <div class="jjx_20">
+           <div class="jjx_19">
+            <img class="jjx_20_1" id="touxiang" width="356" height="356" src="images/3.png"/>
+           </div>
+        </div>
+        <div class="jjx_12">
+            <img class="jjx_121" src="images/jjx_121.png"/>
+            <img class="jjx_122" src="images/jjx_122.png"/>
+            <img class="jjx_123" src="images/jjx_123.png"/>
+            <img class="jjx_124" src="images/jjx_124.png"/>
+            <img class="jjx_125" src="images/jjx_125.png"/>	    
+        </div>
+        <img class="jjx_201"  src="images/jjx_phone_bg.png"/>
+        <div class="line">
+            <img class="jjx_x1" src="images/jjx_x1.png"/>
+            <img class="jjx_x2" src="images/jjx_x2.png"/>
+            <img class="jjx_x3" src="images/jjx_x3.png"/>
+            <img class="jjx_x4" src="images/jjx_x4.png"/>
+            <img class="jjx_x5" src="images/jjx_x5.png"/>
+            <img class="jjx_x6" src="images/jjx_x6.png"/>
+            <img class="jjx_x7" src="images/jjx_x7.png"/>
+            <img class="jjx_x8" src="images/jjx_x8.png"/>
+            <img class="jjx_x9" src="images/jjx_x9.png"/>
+            <img class="jjx_x10" src="images/jjx_x10.png"/>
+            <img class="jjx_x11" src="images/jjx_x11.png"/>
+        </div>
+    </div>	
+    <div class="musicUI cur" onclick="ado()">
+        <span class="rect1"></span>
+        <span class="rect2"></span>
+        <span class="rect3"></span>
+        <span class="rect4"></span>
+        <span class="rect5"></span>
+        <span class="rect6"></span>
+        <span class="rect7"></span>
+        <span class="rect8"></span>
+        <span class="rect9"></span>
+        <span class="rect10"></span>
+        <span class="rect11"></span>
+        <span class="rect12"></span>
+        <span class="rect13"></span>
+        <span class="rect14"></span>
+    </div> 
+    <!--注释掉的内容不要删除-->
+<!--    <img src="../img/mp3tip.png" class="tipPlayMusic" /> 
+    <div class="returnBtn"><img src="../img/returnBtn.png" /></div> 
+    <div class="popUpBox">
+        <div class="share">
+            <span class="shareBtn"></span>
+        </div>
+        <div class="friend">
+            <p style="color:#e5d79a; text-align:center; font-size:24px; font-weight:bold;margin-top:15px;letter-spacing: 2px;line-height:100%;">有<span id="num">1</span>位朋友为我站台</p>
+                <span class="makeBtn"></span>
+        </div>
+    </div>
+    <audio id="shareMusic" src="../vo/share_01.mp3"  preload></audio>--> 
+<!--    <script src="../../common/jquery.js"></script>
+    <script src="../common/zepto.min.js"></script>
+    <script>window.$$ = window.Zepto</script>
+    <script src="../common/PxLoader.js"></script>
+    <script src="../common/self-min.js"></script>
+    <script src="../../common/base.js"></script>
+    <script src="../common/animation.js"></script> 
+    <script src="js/js.js"></script>-->
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/PxLoader.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script>window.$$ = window.Zepto</script>
+    <script src="js/self-min.js"></script>
+    <!--<script src="js/base.js"></script>-->
+    <!--<script src="js/animation.js"></script> -->
+    <script src="js/js.js"></script>    
+        
+    <script>
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isAndroid) {
+           $(".jjx_19").addClass("jjx_19_2").removeClass("jjx_19_1");
+           $(".jjx_20_1").addClass("jjx_20_12").removeClass("jjx_20_11");
+        }
+        if (isiOS) {
+          $(".jjx_20_1").addClass("jjx_20_11").removeClass("jjx_20_12");
+          $(".jjx_19").addClass("jjx_19_1").removeClass("jjx_19_2");
+        }
+    </script>
+    <script>
+/*        $(function(){
+            if(userImgSrc){
+                $('#touxiang').attr('src',userImgSrc);
+            }
+        });*/
+        
+            function ado(){
+                if($('#music0')[0].paused){
+                    $('#music0')[0].play(); 
+                    $('.musicUI').addClass('cur');
+                 }else{
+                    $('#music0')[0].pause(); 
+                    $('.musicUI').removeClass('cur');
+                        
+                 }
+               ga('send', 'event', 'button', 'bg_music', 'Page_typechoose');
+              _smq.push(['custom','Page Type Choose','BG Music','Mobile']);
+            }
+    </script>
+</div>
+</body>
+</html>

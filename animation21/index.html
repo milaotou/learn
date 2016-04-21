@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link rel="stylesheet" href="../common/base.css" />-->
+<link href="css/animations.css" rel="stylesheet" />
+<link href="css/style1.css" rel="stylesheet" />
+<title>摇滚型</title>
+<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no" />
+	<style>
+		.tips{ position:absolute;width:97px; height:199px; overflow:hidden; right:30px; top:68px;/* -webkit-animation:tips 10s infinite;*/}
+		@-webkit-keyframes tips{
+			0%{ width:0px; height:13px;}
+			30%{width:97px; height:13px;}
+			100%{ height:199px;}
+		}
+		.popUpBox{ position:absolute;width:100%; left:0; bottom:0;z-index:999;}
+		.popUpBox>div{ display:none; position:absolute; bottom:0; left:0; width:100%;background-color:rgba(0,0,0,0.4);}
+		.share{ height:120px; background:rgba(0,0,0,0.4) url(../img/sharebg2.png) center no-repeat;}
+		.friend{ height:120px;}
+		.shareBtn{ display:block; position:absolute;width:256px;height:53px;bottom:10px; left:188px; opacity:0;}
+		
+        .makeBtn{position:absolute; display:block;height:74px;width:100%; background:url(../img/stageBtn.png) center no-repeat; bottom:0px; left:0;}
+	</style>
+<!--<script src="../../common/jquery.js"></script>
+<script src="../common/PxLoader.js"></script>
+<script src="../common/zepto.min.js"></script>
+<script>window.$$ = window.Zepto</script>
+<script src="../common/self-min.js"></script>
+<script src="../../common/base.js"></script>
+<script src="../common/animation.js"></script> 
+<script src="js/animate.js"></script>-->
+
+<script src="js/jquery.js"></script>
+<script src="js/PxLoader.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>window.$$ = window.Zepto</script>
+<script src="js/self-min.js"></script>
+<!--<script src="js/base.js"></script>-->
+<!--<script src="js/animation.js"></script> -->
+<script src="js/animate.js"></script>
+</head>
+
+<body>
+<div class="topDiv" style="width:640px; height: 100%; overflow: hidden">
+    <div class="main pagadq pg1">
+        <div class="p1_1">
+            <img src="images/1_1.png" />
+            <img class="p1_2" src="images/1_2.png" />
+            <img src="images/1_1a.png" />
+            <img class="p1_2" src="images/1_2a.png" />
+            <img src="images/1_1b.png" />
+            <img class="p1_2" src="images/1_2b.png" />
+            <img src="images/1_1c.png" />
+            <img class="p1_2" src="images/1_2c.png" />
+            <img src="images/1_1d.png" />
+            <img class="p1_2" src="images/1_2c.png" />
+            <img src="images/1_1d.png" />
+            <img class="p1_2" src="images/1_2c.png" />
+        </div>
+        <div class="p2_1">
+            <img src="images/p2_1.png" />
+            <img src="images/p2_2.png" />
+            <img src="images/p2_3.png" />
+        </div>
+        <div class="p3_1">
+            <img src="images/p3_1.png" />
+            <img src="images/p3_2.png" />
+            <img src="images/p3_3.png" />
+        </div>
+        <div class="p4_1">
+           <div class="rwbox">
+             <img class="rw" width="366" height="366" src="images/rw.jpg" />
+           </div>
+        </div>
+        <div class="p4_1f p4_1">
+           <div class="rwbox">
+             <img class="rw" width="366" height="366" src="images/rw.jpg" />
+           </div>
+        </div>
+        <img class="p5_1" src="images/p5_1.png" />
+        <div class="p6_1 p6_1dh">
+            <img src="images/sjx1.png" />
+            <img src="images/sjx2.png" />
+            <img src="images/sjx3.png" />
+            <img src="images/sjx1.png" />
+            <img src="images/sjx2.png" />
+            <img src="images/sjx3.png" />
+        </div>    
+        <div class="p7_1">
+            <img src="images/p7_1.png" />
+        </div>
+        <div class="p7_2">
+            <img src="images/p7_2.png" />
+        </div>
+        <div class="p8_1 p8_1dh">
+            <img src="images/p8_1.png" />
+            <img src="images/p8_1.png" />
+            <img src="images/p8_1.png" />
+        </div>
+        <div class="p9_1 p9_1dh">
+            <img src="images/p9_1j.png" />
+            <img src="images/p9_1a.png" />
+            <img src="images/p9_1b.png" />
+            <img src="images/p9_1c.png" />
+            <img src="images/p9_1d.png" />
+            <img src="images/p9_1e.png" />
+            <img src="images/p9_1h.png" />
+            <img src="images/p9_1i.png" />
+            <img src="images/p9_1k.png" />
+        </div>
+        <img class="p10_1" src="images/p10_1.png" />
+        <img class="p10_2" src="images/p10_2.png" />
+        <div class="p11_1">
+            <img src="images/p11_1.png" />
+        </div>
+        <img class="p12_1" src="images/p12_1.png" />
+        <img class="p12_1a p12_1adh" src="images/p12_1.png" />
+        <div class="rwbox"><img class="rw" width="366" height="366" src="images/rw.jpg" /></div>
+        <img class="guang" src="images/guang.png" />
+        <img class="geci" src="images/geci.png" />
+       
+        <div class="geci2">
+         <img class="w4" src="images/geci2.png" />
+         <img  class="w5" src="images/w2.png" />
+         
+        </div>
+        <div class="geci3">
+          <img class="w3" src="images/geci3.png" />
+          <img  class="w2" src="images/w1.png" />
+        </div>
+       
+      
+        <div class="pbg_1">
+            <div class="pbg_1_1"></div>
+        </div>
+    </div>
+    <!--整合时音乐路径需替换-->
+    <div style="position:absolute; left:-9999px; overflow:hidden; width:0; height:0;">
+      <audio id="music0" src="music2_1.mp3" preload="preload" loop></audio> 
+    </div>
+    <div class="musicUI cur" onclick="ado()" style="z-index:200;">
+        <span class="rect1"></span>
+        <span class="rect2"></span>
+        <span class="rect3"></span>
+        <span class="rect4"></span>
+        <span class="rect5"></span>
+        <span class="rect6"></span>
+        <span class="rect7"></span>
+        <span class="rect8"></span>
+        <span class="rect9"></span>
+        <span class="rect10"></span>
+        <span class="rect11"></span>
+        <span class="rect12"></span>
+        <span class="rect13"></span>
+        <span class="rect14"></span>
+    </div> 
+    <!--注释掉的内容不要删除-->
+<!--    <img src="../img/mp3tip.png" class="tipPlayMusic" />
+    <div class="returnBtn" style="z-index: 111;"><img src="../img/returnBtn.png" /></div>  
+    <div class="popUpBox">
+        <div class="share">
+            <span class="shareBtn"></span>
+        </div>
+        <div class="friend">
+            <p style="color:#e5d79a; text-align:center; font-size:24px; font-weight:bold;margin-top:15px;letter-spacing: 2px;line-height:100%;">有<span id="num">1</span>位朋友为我站台</p>
+                <span class="makeBtn"></span>
+        </div>
+    </div>
+     <audio id="shareMusic" src="../vo/share_01.mp3"  preload></audio>-->
+    <script>
+/*        $(function(){
+				if(userImgSrc){
+					$('.rwbox .rw').attr('src',userImgSrc);
+				}
+        });*/
+        
+		function ado(){
+			if($('#music0')[0].paused){
+				$('#music0')[0].play(); 
+				$('.musicUI').addClass('cur');
+		     }else{
+				$('#music0')[0].pause(); 
+				$('.musicUI').removeClass('cur');
+					
+			 }
+		   ga('send', 'event', 'button', 'bg_music', 'Page_typechoose');
+		  _smq.push(['custom','Page Type Choose','BG Music','Mobile']);
+		}
+     </script>    
+</div>
+</body>
+</html>
